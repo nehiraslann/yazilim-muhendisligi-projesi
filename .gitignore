@@ -1,0 +1,51 @@
+# Dependencies
+node_modules/
+**/node_modules/
+frontend/node_modules/.vite-temp/
+frontend/.vite/
+.npm/
+.pnpm-store/
+
+# Build output
+dist/
+build/
+**/dist/
+**/build/
+coverage/
+.nyc_output/
+.cache/
+.eslintcache
+
+# Environment files
+.env
+.env.*
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+
+# Logs
+*.log
+*.err
+*.out
+*.pid
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Temporary files
+tmp/
+temp/
+
+# Local artifacts
+all_css.txt
+database_dump.sql
