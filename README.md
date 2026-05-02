@@ -1,37 +1,37 @@
 # StyleAI / My Fashion Fullstack
 
 ## Proje Hakkında
-Bu proje, bireysel yazilim muhendisligi bitirme projem olarak gelistirdigim tam yigin bir moda platformudur. Uygulamada kullanicilar rol bazli giris yapabiliyor, urunleri inceleyebiliyor, kombin olusturabiliyor ve yapay zeka destekli kombin onerileri alabiliyor. Arayuzde proje adi `StyleAI`, repo adi ise `My Fashion Fullstack` olarak geciyor.
+Bu proje, yazılım mühendisliği bitirme projesi kapsamında geliştirilmiş tam yığın bir moda platformudur. Uygulama üzerinde kullanıcılar rol bazlı giriş yapabilmekte, ürünleri inceleyebilmekte, kombin oluşturabilmekte ve yapay zeka destekli kombin önerileri alabilmektedir. Arayüzde proje adı `StyleAI`, depo adı ise `My Fashion Fullstack` olarak kullanılmaktadır.
 
-Bu projede amacim sadece calisan bir uygulama cikarmak degildi. Ayni zamanda analiz, gelistirme, test ve dokumantasyon tarafini daha duzenli gosterebilen bir bitirme projesi ortaya koymak istedim.
+Çalışma kapsamında yalnızca işlevsel bir uygulama geliştirilmesi değil, aynı zamanda analiz, tasarım, geliştirme, test ve dokümantasyon süreçlerinin düzenli ve izlenebilir bir biçimde yürütülmesi hedeflenmiştir.
 
 ## Kullanılan Teknolojiler
 - Frontend: React, Vite, React Router, Axios, i18next, Tailwind CSS, CSS
 - Backend: Node.js, Express.js, PostgreSQL, pg, JWT, bcrypt, dotenv
-- Gelistirme araclari: Nodemon, ESLint, npm scriptleri, PowerShell kontrol scriptleri
+- Geliştirme araçları: Nodemon, ESLint, npm scriptleri, PowerShell kontrol scriptleri
 
 ## Kullanıcı Rolleri
-- `Customer`: urunleri gorur, filtreler, kombin olusturur, AI onerisi alir ve kaydeder.
-- `Seller`: kendi urunlerini ekler, gunceller ve siler.
-- `Admin`: kullanicilari ve urun durumlarini yonetir, kategori ve renk listelerini duzenler.
+- `Customer`: Ürünleri görüntüler, filtreler, kombin oluşturur, yapay zeka önerisi alır ve oluşturduğu kombinleri kaydeder.
+- `Seller`: Kendi ürünlerini ekler, günceller ve siler.
+- `Admin`: Kullanıcıları ve ürün durumlarını yönetir, kategori ve renk listelerini düzenler.
 
 ## Temel Özellikler
-- Kullanici kaydi, giris ve JWT tabanli kimlik dogrulama
-- Rol bazli sayfa ve endpoint korumasi
-- Urun listeleme, arama, filtreleme ve siralama
-- Seller panelinden urun ekleme, guncelleme ve silme
-- Manuel kombin olusturma ve kaydetme
-- AI Stylist ekranindan kombin onerisi alma ve kaydetme
-- Profil bilgilerini guncelleme ve sifre degistirme
-- Admin tarafinda kullanici ve urun moderasyonu
-- Turkce ve Ingilizce dil destegi
+- Kullanıcı kaydı, giriş ve JWT tabanlı kimlik doğrulama
+- Rol bazlı sayfa ve endpoint koruması
+- Ürün listeleme, arama, filtreleme ve sıralama
+- Seller paneli üzerinden ürün ekleme, güncelleme ve silme
+- Manuel kombin oluşturma ve kaydetme
+- AI Stylist ekranı üzerinden kombin önerisi alma ve kaydetme
+- Profil bilgilerinin güncellenmesi ve şifre değiştirme
+- Admin tarafında kullanıcı ve ürün moderasyonu
+- Türkçe ve İngilizce dil desteği
 
 ## Proje Kurulumu
 ### Backend
-1. `backend/.env.example` dosyasini `backend/.env` olarak kopyalayin.
-2. Dosya icindeki alanlari kendi yerel veritabani bilgilerinizle doldurun.
-3. PostgreSQL tarafinda kullanacaginiz veritabanini olusturun. Varsayilan isim `styleai_db` olarak geciyor.
-4. Asagidaki komutlari calistirin:
+1. `backend/.env.example` dosyasını `backend/.env` olarak kopyalayın.
+2. Dosya içindeki alanları yerel veritabanı bilgileriniz doğrultusunda doldurun.
+3. PostgreSQL tarafında kullanılacak veritabanını oluşturun. Varsayılan ad `styleai_db` olarak tanımlanmıştır.
+4. Aşağıdaki komutları çalıştırın:
 
 ```bash
 cd backend
@@ -39,12 +39,12 @@ npm install
 npm run dev
 ```
 
-Backend ilk acilista veritabani yapisini kontrol eder, gerekirse tablolari olusturur ve temel verileri yukler.
+Backend uygulaması ilk açılışta veritabanı yapısını kontrol eder; gerekli görülmesi durumunda tabloları oluşturur ve temel verileri yükler.
 
 ### Frontend
-1. `frontend` klasorune gecin.
-2. Gerekirse `frontend/.env.example` dosyasini `frontend/.env` olarak kopyalayip API adresini degistirin.
-3. Asagidaki komutlari calistirin:
+1. `frontend` klasörüne geçin.
+2. Gerekli durumlarda `frontend/.env.example` dosyasını `frontend/.env` olarak kopyalayarak API adresini güncelleyin.
+3. Aşağıdaki komutları çalıştırın:
 
 ```bash
 cd frontend
@@ -52,10 +52,10 @@ npm install
 npm run dev
 ```
 
-Varsayilan durumda frontend, backend icin `http://localhost:3000/api` adresini kullanir.
+Varsayılan yapılandırmada frontend tarafı, backend servisi için `http://localhost:3000/api` adresini kullanır.
 
 ## Ortam Değişkenleri
-Backend tarafinda kullanilan degiskenler `backend/.env.example` icinde yer aliyor:
+Backend tarafında kullanılan değişkenler `backend/.env.example` dosyasında yer almaktadır:
 
 - `PORT`
 - `DB_USER`
@@ -69,26 +69,26 @@ Backend tarafinda kullanilan degiskenler `backend/.env.example` icinde yer aliyo
 - `ADMIN_EMAIL`
 - `ADMIN_PASSWORD`
 
-Frontend tarafinda zorunlu bir `.env` dosyasi yoktur. Sadece farkli bir API adresi kullanmak isterseniz `VITE_API_URL` degiskenini tanimlayabilirsiniz.
+Frontend tarafında zorunlu bir `.env` dosyası bulunmamaktadır. Farklı bir API adresi kullanılmak istenirse `VITE_API_URL` değişkeni tanımlanabilir.
 
 ## Test Edilen Senaryolar
-Projede hem teknik kontroller hem de kullanici akislarini kapsayan test senaryolari hazirlandi. Kisa ozetle test edilen basliklar su sekilde:
+Projede hem teknik doğrulama adımlarını hem de kullanıcı akışlarını kapsayan test senaryoları hazırlanmıştır. Özet olarak test edilen başlıklar aşağıdaki şekildedir:
 
-- Frontend lint ve production build kontrolu
-- Backend syntax ve veritabani bootstrap kontrolu
-- Kayit ve giris akisi
-- Rol bazli sayfa ve endpoint erisimleri
-- Seller urun yonetimi
-- Musteri tarafinda urun kesfi, filtreleme ve siralama
-- Manuel kombin olusturma ve silme
-- AI onerisi uretme ve kaydetme
-- Profil guncelleme ve sifre degistirme
-- Admin kullanici ve urun moderasyonu
+- Frontend lint ve production build kontrolü
+- Backend syntax ve veritabanı bootstrap kontrolü
+- Kayıt ve giriş akışı
+- Rol bazlı sayfa ve endpoint erişimleri
+- Seller ürün yönetimi
+- Müşteri tarafında ürün keşfi, filtreleme ve sıralama
+- Manuel kombin oluşturma ve silme
+- Yapay zeka önerisi üretme ve kaydetme
+- Profil güncelleme ve şifre değiştirme
+- Admin kullanıcı ve ürün moderasyonu
 
-Detayli liste icin `TEST_CASES.md` dosyasina bakilabilir.
+Detaylı liste için `TEST_CASES.md` dosyasına başvurulabilir.
 
 ## Proje Yapısı
-Proje yapisini fazla karmasik tutmamak icin frontend, backend ve dokumantasyon dosyalarini ayri klasorlerde topladim:
+Proje yapısı; frontend, backend ve dokümantasyon bileşenlerinin daha düzenli yönetilebilmesi amacıyla ayrı klasörlerde yapılandırılmıştır:
 
 ```text
 My_Fashion_Fullstack/
@@ -102,20 +102,20 @@ My_Fashion_Fullstack/
   DELIVERY_CHECKLIST.md
 ```
 
-- `backend/`: Express API, veritabani baglantisi, route yapisi, middleware ve is kurallari
-- `frontend/`: React arayuzu, sayfalar, componentler, context yapisi, yardimci fonksiyonlar ve dil dosyalari
-- `scripts/`: gelistirme sirasinda kullandigim yardimci scriptler
-- `PROJECT_REPORT.md`: proje raporu
-- `TEST_CASES.md`: test senaryolari
-- `DEMO_FLOW.md`: demo akisi
-- `DELIVERY_CHECKLIST.md`: son kontrol listesi
+- `backend/`: Express API, veritabanı bağlantısı, route yapısı, middleware katmanı ve iş kuralları
+- `frontend/`: React arayüzü, sayfalar, bileşenler, context yapısı, yardımcı fonksiyonlar ve dil dosyaları
+- `scripts/`: Geliştirme sürecinde kullanılan yardımcı scriptler
+- `PROJECT_REPORT.md`: Proje raporu
+- `TEST_CASES.md`: Test senaryoları
+- `DEMO_FLOW.md`: Demo akışı
+- `DELIVERY_CHECKLIST.md`: Son kontrol listesi
 
 ## Geliştirici Notları
-Bu proje bitirme projesi oldugu icin yapisini bilincli olarak anlasilir tutmaya calistim. Ana mantigi gereksiz sekilde karmasiklastirmadan rol yonetimi, urun akislari ve kombin mantigini daha rahat anlatilabilir bir seviyede biraktim.
+Bu proje, bitirme çalışması niteliği taşıdığı için anlaşılabilirlik ve sürdürülebilirlik ilkeleri gözetilerek yapılandırılmıştır. Temel mimari kararlar alınırken rol yönetimi, ürün akışları ve kombin oluşturma mantığının açık biçimde izlenebilir olmasına öncelik verilmiştir.
 
-AI onerisi kismi dis bir buyuk servis yerine daha acik anlatilabilir bir mantikla ilerliyor. Bu da savunma sirasinda sistemi adim adim aciklamayi kolaylastiriyor.
+Yapay zeka öneri bileşeni, dışa bağımlılığı artıran karmaşık bir servis yapısı yerine daha açıklanabilir bir mantıkla ele alınmıştır. Bu yaklaşım, sistemin çalışma prensibinin proje sunumu ve akademik değerlendirme sürecinde daha net ifade edilmesine katkı sağlamaktadır.
 
-Projeyi GitHub'a yuklerken gercek `.env` dosyalarinin, `node_modules`, log dosyalarinin ve build ciktisinin repoya girmemesi gerekiyor. Bu nedenle repoda sadece ornek ortam degiskeni dosyalari tutulmali.
+Projenin GitHub ortamına aktarılması sırasında gerçek `.env` dosyalarının, `node_modules` klasörünün, log dosyalarının ve build çıktılarının depoya dahil edilmemesi gerekmektedir. Bu nedenle repoda yalnızca örnek ortam değişkeni dosyalarının tutulması önerilmektedir.
 
 ## Geliştirici Ekibi
 
