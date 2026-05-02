@@ -119,9 +119,11 @@ Projeyi GitHub'a yuklerken gercek `.env` dosyalarinin, `node_modules`, log dosya
 
 ## Geliştirici Ekibi
 
-Bu proje, yazılım mühendisliği bitirme projesi kapsamında iki kişilik ekip çalışması olarak geliştirilmiştir.
+Bu çalışma, yazılım mühendisliği bitirme projesi kapsamında iki kişilik bir ekip tarafından geliştirilmiştir. Proje sürecinde analiz, tasarım, geliştirme, test ve dokümantasyon aşamaları yazılım mühendisliği yaşam döngüsü dikkate alınarak yürütülmüştür.
 
-- Ayşegül BULUT – Frontend geliştirme, kullanıcı arayüzü tasarımı ve test senaryoları
-- Nehir Aslan – Backend geliştirme, veritabanı tasarımı ve API yapısı
+Ekip üyelerinin temel sorumluluk dağılımı aşağıdaki şekildedir:
 
-Projede analiz, geliştirme, test ve dokümantasyon süreçleri ekip üyeleri tarafından birlikte yürütülmüştür.
+- Ayşegül BULUT – Kullanıcı arayüzü (frontend) geliştirme, kullanıcı deneyimi tasarımı ve test senaryolarının oluşturulması
+- Nehir Aslan – Sunucu tarafı (backend) geliştirme, veritabanı tasarımı ve API mimarisinin oluşturulması
+
+Proje sürecinde karar alma, sistem tasarımı ve uygulama geliştirme aşamaları ekip üyeleri tarafından birlikte değerlendirilmiş ve yürütülmüştür.
