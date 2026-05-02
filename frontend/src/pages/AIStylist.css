@@ -1,0 +1,729 @@
+/* ================================================
+   AIStylist.css — Premium AI Stylist Page
+   StyleAI Design System | Warm Neutral Palette
+   ================================================ */
+
+/* ── PAGE SHELL ───────────────────────────────── */
+.ais-page {
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+/* ── HERO ─────────────────────────────────────── */
+.ais-hero {
+  padding: 5rem 1.5rem 4rem;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    var(--color-bg-warm) 0%,
+    var(--color-bg) 100%
+  );
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.ais-hero-inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.ais-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primary-dark);
+  background: var(--color-primary-light);
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.ais-hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.ais-hero-sub {
+  font-size: 1.05rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* ── BODY WRAPPER ─────────────────────────────── */
+.ais-body {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* ── SECTION ──────────────────────────────────── */
+.ais-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.ais-section-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.ais-section-label i {
+  color: var(--color-primary);
+  font-size: 0.9rem;
+}
+
+/* ── SEASON GRID ──────────────────────────────── */
+.ais-season-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 700px) {
+  .ais-season-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.ais-season-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 20px 18px;
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  text-align: left;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.15s ease;
+}
+
+.ais-season-card:hover {
+  border-color: var(--color-primary-light);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-1px);
+}
+
+.ais-season-card.is-selected {
+  border-color: var(--color-primary);
+  background: var(--color-primary-light);
+  box-shadow: 0 0 0 3px rgba(197, 164, 126, 0.18);
+}
+
+.ais-season-icon {
+  font-size: 1.1rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 4px;
+  opacity: 0.85;
+}
+
+.ais-season-card.is-selected .ais-season-icon {
+  opacity: 1;
+}
+
+.ais-season-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.2;
+}
+
+.ais-season-desc {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  line-height: 1.45;
+}
+
+.ais-season-card.is-selected .ais-season-name,
+.ais-season-card.is-selected .ais-season-desc {
+  color: var(--color-primary-dark);
+}
+
+.ais-season-check {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+}
+
+/* ── STYLE BUTTONS ────────────────────────────── */
+.ais-style-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ais-style-btn {
+  padding: 10px 24px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--color-border);
+  background: var(--color-surface) !important;
+  color: var(--color-text-secondary) !important;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.ais-style-btn:hover {
+  border-color: var(--color-primary-light);
+  color: var(--color-primary-dark) !important;
+  background: var(--color-bg-warm) !important;
+}
+
+.ais-style-btn.is-selected {
+  background: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: #fff !important;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(197, 164, 126, 0.35);
+}
+
+/* ── CTA ──────────────────────────────────────── */
+.ais-cta-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 1rem 0 0.5rem;
+}
+
+.ais-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 48px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 18px rgba(197, 164, 126, 0.4);
+  transition: all 0.22s ease;
+}
+
+.ais-cta-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(197, 164, 126, 0.5);
+}
+
+.ais-cta-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.ais-cta-hint {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.05em;
+}
+
+/* ── MESSAGES ─────────────────────────────────── */
+.ais-msg {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.ais-msg--error {
+  background: #fef2f2;
+  color: var(--color-danger);
+  border: 1px solid #fecaca;
+}
+
+.ais-msg--info {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+
+.ais-msg--success {
+  background: #f0fdf4;
+  color: var(--color-success);
+  border: 1px solid #bbf7d0;
+}
+
+.ais-toast-stack {
+  position: fixed;
+  top: 92px;
+  right: 24px;
+  z-index: 1200;
+  width: min(420px, calc(100vw - 32px));
+}
+
+.ais-toast {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  font-size: 0.92rem;
+  font-weight: 600;
+  box-shadow: var(--shadow-lg);
+  animation: ais-toast-in 0.22s ease;
+}
+
+.ais-toast--success {
+  background: #f0fdf4;
+  color: var(--color-success);
+  border: 1px solid #bbf7d0;
+}
+
+@keyframes ais-toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── RESULTS ──────────────────────────────────── */
+.ais-results {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.ais-results-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.ais-results-title {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ais-results-title i {
+  color: var(--color-primary);
+  font-size: 1.2rem;
+}
+
+.ais-results-count {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ── CARDS GRID ───────────────────────────────── */
+.ais-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+@media (max-width: 720px) {
+  .ais-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── CARD ─────────────────────────────────────── */
+.ais-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.22s ease, transform 0.22s ease;
+}
+
+.ais-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+/* ── CARD IMAGES ──────────────────────────────── */
+.ais-card-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 220px;
+  overflow: hidden;
+  background: var(--color-bg-warm);
+}
+
+.ais-card-img-wrap {
+  position: relative;
+  overflow: hidden;
+  border-right: 2px solid #fff;
+}
+
+.ais-card-img-wrap:last-child {
+  border-right: none;
+}
+
+.ais-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.ais-card:hover .ais-card-img {
+  transform: scale(1.04);
+}
+
+.ais-card-img-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-warm);
+  color: var(--color-text-muted);
+  font-size: 1.2rem;
+}
+
+/* ── CARD BODY ────────────────────────────────── */
+.ais-card-body {
+  padding: 20px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+}
+
+/* ── TOP ROW ──────────────────────────────────── */
+.ais-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.ais-card-name {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.25;
+  flex: 1;
+}
+
+.ais-card-price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── SCORE ────────────────────────────────────── */
+.ais-score-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ais-score-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.ais-score-track {
+  flex: 1;
+  height: 4px;
+  background: var(--color-border-light);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.ais-score-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.6s ease;
+}
+
+.ais-score-pct {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  min-width: 32px;
+  text-align: right;
+}
+
+/* ── COLOR TAGS ───────────────────────────────── */
+.ais-color-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.ais-color-tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: var(--color-bg-warm);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border-light);
+}
+
+/* ── AI REASON ────────────────────────────────── */
+.ais-reason {
+  display: flex;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--color-bg-warm);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--color-primary-light);
+}
+
+.ais-reason-icon {
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.ais-reason-text {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ── TOGGLE BTN ───────────────────────────────── */
+.ais-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 9px 16px;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.ais-toggle-btn:hover {
+  background: var(--color-bg-warm);
+  border-color: var(--color-primary-light);
+  color: var(--color-primary-dark);
+}
+
+/* ── ITEM LIST ────────────────────────────────── */
+.ais-item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ais-item-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  background: var(--color-bg-warm);
+  border-radius: var(--radius-sm);
+}
+
+.ais-item-thumb {
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.ais-item-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ais-item-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ais-item-cat {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+}
+
+.ais-item-price {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  white-space: nowrap;
+}
+
+/* ── CARD FOOTER ──────────────────────────────── */
+.ais-card-footer {
+  margin-top: auto;
+  padding-top: 4px;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.ais-save-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 12px;
+}
+
+.ais-save-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(197, 164, 126, 0.4);
+}
+
+.ais-save-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.82;
+  transform: none;
+  box-shadow: none;
+}
+
+.ais-save-btn.is-saved {
+  background: linear-gradient(135deg, #4f9d69, #2f7d45);
+}
+
+/* ── DARK MODE ────────────────────────────────── */
+[data-theme="dark"] .ais-hero {
+  background: linear-gradient(180deg, var(--color-bg-warm) 0%, var(--color-bg) 100%);
+}
+
+[data-theme="dark"] .ais-card {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .ais-season-card {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .ais-season-card:hover {
+  background: var(--color-surface-hover);
+  border-color: var(--color-primary-light);
+}
+
+[data-theme="dark"] .ais-season-card.is-selected {
+  background: var(--color-primary-light);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(216, 179, 141, 0.18);
+}
+
+[data-theme="dark"] .ais-season-card.is-selected .ais-season-name,
+[data-theme="dark"] .ais-season-card.is-selected .ais-season-desc {
+  color: var(--color-primary);
+}
+
+[data-theme="dark"] .ais-style-btn {
+  background: var(--color-surface) !important;
+  border-color: var(--color-border) !important;
+  color: var(--color-text-secondary) !important;
+}
+
+[data-theme="dark"] .ais-style-btn:hover {
+  background: var(--color-surface-hover) !important;
+  color: var(--color-text) !important;
+}
+
+[data-theme="dark"] .ais-style-btn.is-selected {
+  background: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: #15110f !important;
+}
+
+[data-theme="dark"] .ais-cta-btn {
+  color: #15110f;
+}
+
+[data-theme="dark"] .ais-toggle-btn:hover {
+  background: var(--color-surface-hover);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+[data-theme="dark"] .ais-save-btn {
+  color: #15110f;
+}
+
+[data-theme="dark"] .ais-toast--success {
+  background: rgba(34, 73, 48, 0.95);
+  color: #dbf7e2;
+  border-color: rgba(121, 191, 144, 0.45);
+}
