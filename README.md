@@ -116,3 +116,12 @@ Bu proje bitirme projesi oldugu icin yapisini bilincli olarak anlasilir tutmaya 
 AI onerisi kismi dis bir buyuk servis yerine daha acik anlatilabilir bir mantikla ilerliyor. Bu da savunma sirasinda sistemi adim adim aciklamayi kolaylastiriyor.
 
 Projeyi GitHub'a yuklerken gercek `.env` dosyalarinin, `node_modules`, log dosyalarinin ve build ciktisinin repoya girmemesi gerekiyor. Bu nedenle repoda sadece ornek ortam degiskeni dosyalari tutulmali.
+
+## Geliştirici Ekibi
+
+Bu proje, yazılım mühendisliği bitirme projesi kapsamında iki kişilik ekip çalışması olarak geliştirilmiştir.
+
+- Ayşegül BULUT – Frontend geliştirme, kullanıcı arayüzü tasarımı ve test senaryoları
+- Nehir Aslan – Backend geliştirme, veritabanı tasarımı ve API yapısı
+
+Projede analiz, geliştirme, test ve dokümantasyon süreçleri ekip üyeleri tarafından birlikte yürütülmüştür.
