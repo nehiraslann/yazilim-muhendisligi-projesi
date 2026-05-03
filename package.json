@@ -1,0 +1,14 @@
+{
+  "name": "styleai-workspace",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "start:backend": "npm --prefix backend start",
+    "check:backend": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-backend.ps1",
+    "lint:frontend": "npm --prefix frontend run lint",
+    "build:frontend": "npm --prefix frontend run build",
+    "verify": "npm run check:backend && npm run lint:frontend && npm run build:frontend"
+  }
+}
